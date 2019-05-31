@@ -7,10 +7,7 @@ import { Component, OnInit,Input } from '@angular/core';
 })
 export class GrandChildComponent implements OnInit {
   @Input() public simpleText: string;
-  constructor() { 
-    console.log('this grandfather page',this.simpleText)
-  }
-
+  constructor() {}
   ngOnInit() {
     console.log('this grandfather page',this.simpleText)
   }

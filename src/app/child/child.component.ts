@@ -7,12 +7,11 @@ import { Component, OnInit ,EventEmitter,Output} from '@angular/core';
 export class ChildComponent implements OnInit {
 
   @Output()numberGenerated = new EventEmitter<number>();
-  public someText = 'Here we go with some text';
+  someText: any
   generateNumber() { 
-    console.log("generateNumber")
-    const randomNumber = Math.random();
-   // console.log("generateNumber",this.numberGenerated,randomNumber)
-    this.numberGenerated.emit(randomNumber); 
+  this.someText = 'Here we go with some text';
+  const randomNumber = Math.random();
+  this.numberGenerated.emit(randomNumber); 
   }
   constructor() {
 
